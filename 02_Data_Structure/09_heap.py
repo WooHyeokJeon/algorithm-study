@@ -58,23 +58,25 @@ class MinHeap:
         return self.heap[0]
 
 # 2. 테스트
-h = MinHeap()
+# 파일을 직접 실행할 때만 동작하도록 감싸서, 다른 파일에서 import해도 출력되지 않음
+if __name__ == "__main__":
+    h = MinHeap()
 
-h.insert(2)
-h.insert(52)
-h.insert(8)
-h.insert(13)
-h.insert(37)
-h.insert(67)
-h.insert(161)
+    h.insert(2)
+    h.insert(52)
+    h.insert(8)
+    h.insert(13)
+    h.insert(37)
+    h.insert(67)
+    h.insert(161)
 
-print(h.heap)           # 힙 배열 상태 출력
-print(h.peek())         # 2
+    print(h.heap)           # 힙 배열 상태 출력
+    print(h.peek())         # 2
 
-# 슬라이드 32페이지: 7 삽입
-h.insert(7)
-print(h.heap)
+    # 슬라이드 32페이지: 7 삽입
+    h.insert(7)
+    print(h.heap)
 
-print(h.delete_min())   # 2
-print(h.delete_min())   # 7
-print(h.heap)
+    print(h.delete_min())   # 2
+    print(h.delete_min())   # 7
+    print(h.heap)

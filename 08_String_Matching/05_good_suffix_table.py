@@ -32,8 +32,7 @@ def build_gst(pattern, suffix, gst):
 
     # 1-4. case2 접미-접미 일치
     for i in range(0, m-1):
-        if suffix[i] > 0:
-            gst[m-1-suffix[i]] = m - 1 - i
+        gst[m-1-suffix[i]] = m - 1 - i
 
 
 # 2. 테스트
@@ -44,7 +43,7 @@ if __name__ == "__main__":
     build_gst(pattern, suffix, gst)
 
     print(suffix)   # [0, 2, 0, 0, 5]
-    print(gst)   # [3, 3, 3, 5, 5]
+    print(gst)   # [3, 3, 3, 5, 1]
 
     pattern = "GCAGAGAG"
     suffix = [0] * len(pattern)
@@ -52,4 +51,4 @@ if __name__ == "__main__":
     build_gst(pattern, suffix, gst)
 
     print(suffix)   # [1, 0, 0, 2, 0, 4, 0, 8]
-    print(gst)   # [7, 7, 7, 2, 7, 4, 7, 8]
+    print(gst)   # [7, 7, 7, 2, 7, 4, 7, 1]
